@@ -1,3 +1,4 @@
 # July-LeetCode-Challenge
-Solutions of all the Questions that can be solved by me on leetcode
+Simple and easy Solutions of the July Leetcode Challenge.
+PS- Time Complexity may be more in some cases.
 #LeetCode
