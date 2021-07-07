@@ -1,0 +1,27 @@
+class Solution {
+    public int countVowelPermutation(int n) {
+        long aC=1, eC=1, iC=1, oC=1, uC=1;
+        int mod=1000000007;
+        long s=5;
+        
+        for(int i=1;i<n;i++)
+        {
+            long aCN=(eC+iC+uC)%mod;
+            long eCN=(aC+iC)%mod;
+            long iCN=(eC+oC)%mod;
+            long oCN=(iC)%mod;
+            long uCN=(iC+oC)%mod;
+            aC=aCN;
+            eC=eCN;
+            iC=iCN;
+            oC=oCN;
+            uC=uCN;
+            s=(aC+eC+iC+oC+uC)%mod;
+        }
+        return (int)s;
+            
+            
+
+        
+    }
+}
