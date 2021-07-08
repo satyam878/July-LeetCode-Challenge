@@ -1,0 +1,22 @@
+class Solution {
+    public int findLength(int[] a, int[] b) {
+        int l1=a.length;
+        int l2=b.length;
+        int max=0;
+        
+        int c[][]=new int[l1+1][l2+1];
+        for(int i=l1-1;i>=0;i--)
+        {
+            for(int j=l2-1;j>=0;j--)
+            {
+                if(a[i]==b[j])
+                {
+                    c[i][j]=c[i+1][j+1]+1;
+                    max=Math.max(max,c[i][j]);
+                }
+            }
+        }
+        return max;
+        
+    }
+}
